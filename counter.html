@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  
+  <head>
+    
+    <meta charset="utf-8">
+    <title>Counter</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
+  
+  </head>
+  
+  <body>
+    
+    <div class="judul">
+      <h1 class="h1">Set Your Number</h1>
+      <h2 id="count">0</h2>
+      <button type="button" class="btn btn-outline-light up" id="plus">Up</button>
+      <button type="button" class="btn btn-outline-light down" id="minus">Down</button>
+    </div>
+    
+    <script>
+
+      var count = document.getElementById('count');
+      var number = 0;
+      var plusDOM = document.getElementById('plus');
+      var minusDOM = document.getElementById('minus');
+
+      plusDOM.addEventListener('click', function(){
+      console.log("Nilai number sekarang: " + number);
+      console.log("tombol Up diklik");
+      number = number + 1  ;
+      console.log("Nilai no sekarang: " + number);
+      count.innerHTML = number;
+      });
+
+      minusDOM.addEventListener('click', function(){
+      console.log("Nilai number sekarang: " + number);
+      console.log("tombol Down diklik");
+      number = number -1 ;
+      console.log("Nilai no sekarang" + number);
+      count.innerHTML = number;
+      });
+
+    </script>
+
+    <div class="fixed-bottom">
+      <footer class="footer">copyright <img src="img/copyright.png"> 2018 miqdadhome.com</footer>
+    </div>
+    
+  </body>
+  
+</html>
